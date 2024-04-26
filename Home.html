@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dialogflow Messenger Integration</title>
+<!-- Dialogflow Messenger Styles -->
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<style>
+    body {
+        font-family: 'Google Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f6fc;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .content-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    .header {
+        background-color: #036885;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+    .section {
+        margin-bottom: 20px;
+    }
+    h2 {
+        color: #333;
+    }
+    p {
+        color: black;
+    }
+    
+    df-messenger {
+        --df-messenger-bot-message: #878fac;
+        --df-messenger-button-titlebar-color: #df9b56;
+        --df-messenger-chat-background-color: #fafafa;
+        --df-messenger-font-color: black;
+        height: 100%;
+        width: 100%;
+        max-width: 500px; /* Adjust as needed */
+        margin: auto;
+    }
+
+    /* Responsive Styles */
+    @media only screen and (max-width: 768px) {
+        .content-container {
+            padding: 10px;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        .header {
+            font-size: 18px;
+        }
+        df-messenger {
+            width: 90%; /* Adjust as needed */
+            max-width: none;
+            margin: auto;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Dialogflow Messenger Script -->
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  project-id="chatbot-for-msit-website"
+  agent-id="1aa3c9b1-40c0-4f59-9683-6eddffc5f121"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat
+   chat-title="">
+  </df-messenger-chat>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 350px;
+  }
+</style>
+
+</body>
+</html>
